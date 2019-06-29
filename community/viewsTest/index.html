@@ -1,0 +1,28 @@
+<!-- 继承模板 -->
+{{extend './layout.html'}}
+
+<!-- 样式 -->
+{{ block 'css' }}
+<style>
+#h1 {
+    color: red;
+}
+</style>
+{{ /block}}
+
+<!-- 内容部分 -->
+{{ block 'content'}}
+<h1 id="h1">hello {{ name }}</h1>
+{{ /block}}
+
+
+<!-- 脚本 -->
+{{ block 'script'}}
+<script>
+$(function() {
+    $('#h1').click(function() {
+        console.log('被点击了')
+    });
+})
+</script>
+{{ /block}}

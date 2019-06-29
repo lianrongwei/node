@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>art-template</title>
+</head>
+<body>
+	<script src="../node_modules/art-template/lib/template-web.js"></script>
+	<script type="text/template" id="tpl">
+		<h1>hello {{ name }},今年{{ age }}岁。</h1>
+	</script>
+	<script>
+		var res =  template('tpl',{
+			name: 'Boke',
+			age: 18
+		})
+		document.querySelector('body').innerHTML = res;
+		console.log(res)
+	</script>
+</body>
+</html>
